@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <h1>Weather</h1>
+  <div id="search-area">
+    <form action="" id="search-form" onsubmit="searchCity(event, this)">
+      <input id="city-search" type="text" placeholder="Search City" required>
+      <button type="submit">Search</button>
+      <div id="error-text"></div>
+    </form>
+  </div>
+    <div id="weather-container">
+      <span id="city-container">
+        <h2 id="city"></h2>
+        <img id="weather-icon">
+      </span>
+      
+    
+      <div id="firstBox">
+        <div id="currentTemp"></div>
+        <div id="description"></div>
+      </div>
+
+      <div id="bottom-container">
+        <div id="bottom-left">
+          <div id="feelsLike" class="weather-item"></div>
+          <div id="humidity" class="weather-item"></div>
+          <div id="wind" class="weather-item"></div>
+        </div>
+        <div id="bottom-right">
+          <div id="chanceOfRain"></div>
+          <div id="rainVol"></div>
+        </div>
+      </div>
+     
+      
+    </div>
+</body>
+</html>
