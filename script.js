@@ -13,7 +13,7 @@ async function getWeatherData(city) {
   try {
     
 
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=ba229d8f556f8a6d29e410a6aedd15ad`)
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=ba229d8f556f8a6d29e410a6aedd15ad`)
     
     if(response.status == 404){
       document.getElementById('error-text').textContent = 'City not found.'
@@ -27,7 +27,7 @@ async function getWeatherData(city) {
 
     console.log({lat, lon})
 
-    const response2 = await fetch(`http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=ba229d8f556f8a6d29e410a6aedd15ad`);
+    const response2 = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=ba229d8f556f8a6d29e410a6aedd15ad`);
     
     if(response2.status == 404){
       throw new Error('lat lon error');
@@ -59,7 +59,7 @@ function parseWeatherData(weatherData, latLonData) {
 }
 
 function displayWeather() {
-  var iconURL = "http://openweathermap.org/img/w/" + iconCode + ".png";
+  var iconURL = "https://openweathermap.org/img/w/" + iconCode + ".png";
   document.getElementById('weather-icon').src = iconURL;
 
   document.getElementById('city').textContent = city + ", " + country;
