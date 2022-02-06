@@ -77,3 +77,66 @@ h1 {
   justify-content: center;
   padding-top: 50px;
 }
+
+#daily-weather {
+  margin-top: 50px;
+  height: 150px; 
+  width: 1050px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+}
+
+.day {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 7px;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  background: linear-gradient(40deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25) );
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.473);
+}
+
+.date {
+  font-size: 16px;
+}
+
+.temps {
+  margin: 12px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.high-temp {
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+.low-temp {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+#city-search {
+  padding-left: 2px;
+  height: 22px;
+  width: 220px;
+  border: none;
+  border-radius: 3px;
+}
+
+button {
+  box-sizing: border-box;
+  border: none;
+  height: 22px;
+  padding: 0px 6px;
+  border-radius: 3px;
+}
+
+button:hover {
+  filter: brightness(90%);
+}

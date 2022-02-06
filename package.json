@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "date-fns": "^2.28.0"
+  },
+  "name": "weather-app",
+  "description": "Weather App project from The Odin Project.  https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/weather-app",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "devDependencies": {
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/travis1010/weather-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/travis1010/weather-app/issues"
+  },
+  "homepage": "https://github.com/travis1010/weather-app#readme"
+}
