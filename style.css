@@ -1,0 +1,142 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  color: #ffffff;
+  text-shadow:rgba(0, 0, 0, .5) 1px 1px 4px;
+  background: linear-gradient(0deg, #a6dddd, #2687c7 );
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+#search-area {
+  margin: 30px;
+}
+
+#weather-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  margin-right: 2px;
+}
+
+#weather-container {
+  display: inline;
+  border-radius: 5px;
+  width: 400px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.473);
+  background: linear-gradient(40deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25) );
+  font-size: 18px;
+}
+
+#city-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  overflow: hidden;
+}
+
+
+#firstBox {
+  padding: 10px 10px 20px 10px;
+}
+
+#currentTemp {
+  font-size: 40px;
+}
+
+#bottom-container {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#error-text {
+  color: rgb(189, 0, 0);
+  margin-top: 3px;
+}
+
+#loading {
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+  font-size: 36px;
+  text-shadow:rgba(0, 0, 0, .5) 1px 1px 4px;
+  display: none;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+#daily-weather {
+  margin-top: 50px;
+  height: 150px; 
+  width: 1050px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+}
+
+.day {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 7px;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  background: linear-gradient(40deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25) );
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.473);
+}
+
+.date {
+  font-size: 16px;
+}
+
+.temps {
+  margin: 12px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.high-temp {
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+.low-temp {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+#city-search {
+  padding-left: 2px;
+  height: 22px;
+  width: 220px;
+  border: none;
+  border-radius: 3px;
+}
+
+button {
+  box-sizing: border-box;
+  border: none;
+  height: 22px;
+  padding: 0px 6px;
+  border-radius: 3px;
+}
+
+button:hover {
+  filter: brightness(90%);
+}
