@@ -31,12 +31,12 @@ h1 {
 }
 
 #weather-container {
+  display: inline;
   border-radius: 5px;
   width: 400px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.473);
   background: linear-gradient(40deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25) );
   font-size: 18px;
-  
 }
 
 #city-container {
@@ -65,4 +65,15 @@ h1 {
 #error-text {
   color: rgb(189, 0, 0);
   margin-top: 3px;
+}
+
+#loading {
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+  font-size: 36px;
+  text-shadow:rgba(0, 0, 0, .5) 1px 1px 4px;
+  display: none;
+  justify-content: center;
+  padding-top: 50px;
 }

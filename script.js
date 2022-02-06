@@ -10,9 +10,8 @@ let chanceOfRain = null;
 let rainVol = null;
 
 async function getWeatherData(city) {
+  showLoading();
   try {
-    
-
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=ba229d8f556f8a6d29e410a6aedd15ad`)
     
     if(response.status == 404){
@@ -25,21 +24,16 @@ async function getWeatherData(city) {
     const lat = latLonData.coord.lat;
     const lon = latLonData.coord.lon;
 
-    console.log({lat, lon})
-
     const response2 = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=ba229d8f556f8a6d29e410a6aedd15ad`);
     
     if(response2.status == 404){
       throw new Error('lat lon error');
     }
 
-    console.log(response2);
-
     const weatherData = await response2.json();
-    console.log(weatherData);
     parseWeatherData(weatherData, latLonData);
-    console.log(weatherData);
     displayWeather();
+    hideLoading();
   } catch (error) {
     console.log(error);
   }
@@ -73,10 +67,19 @@ function displayWeather() {
 }
 
 function searchCity(e, form) {
-  console.log({e, form});
   e.preventDefault();
   let city = document.getElementById('city-search').value;
   getWeatherData(city);
+}
+
+function showLoading() {
+  document.getElementById('loading').style.display = 'flex';
+  document.getElementById('weather-container').style.display = 'none';
+}
+
+function hideLoading() {
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('weather-container').style.display = 'inline';
 }
 
 getWeatherData('paris');
