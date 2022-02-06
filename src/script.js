@@ -47,7 +47,6 @@ async function getWeatherData(city) {
     const weatherData = await response2.json();
     parseWeatherData(weatherData, latLonData);
     displayWeather();
-    console.log(weatherData);
   } catch (error) {
     console.log(error);
   } finally {
